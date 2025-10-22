@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Sansation', sans-serif;
+        }
+        
+        .hanalei-fill-regular {
+            font-family: "Hanalei Fill", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .card {
+            background: transparent;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 
+                0 0 20px rgba(0, 212, 255, 0.4),
+                0 0 40px rgba(168, 85, 247, 0.3);
+        }
+        
+        .gradient-bg {
+            background: radial-gradient(ellipse at top, rgba(0, 212, 255, 0.15), transparent 50%),
+                        radial-gradient(ellipse at bottom, rgba(168, 85, 247, 0.15), transparent 50%);
+            background-color: #0f172a;
+        }
+        
+        .member-avatar {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .portfolio-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-link:hover {
+            background: linear-gradient(45deg, #764ba2, #667eea);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-full gradient-bg">
+    <main class="min-h-full flex flex-col items-center justify-center py-12 px-4">
+        <header class="text-center mb-16">
+            <div class="mb-6">
+                <span class="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full text-cyan-300 text-sm font-medium border border-cyan-500/30 mb-4">
+                    ✨ Meet Our Team
+                </span>
+            </div>
+            <h1 class="text-6xl font-bold bg-gradient-to-r from-white via-cyan-200 to-purple-200 bg-clip-text text-transparent mb-6 leading-tight hanalei-fill-regular">
+                Creative Minds,<br>
+                <span class="text-5xl">Exceptional Results</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-4">
+                We are Team 4 from Group 6. A team of third-year students at ENSIA dedicated to Software Engineering
+            </p>
+            <div class="flex items-center justify-center gap-6 text-slate-400 text-sm">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                    <span>5 Team Members</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    <span>Portfolio Ready</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span>AI Students</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="flex flex-col items-center gap-8 max-w-6xl w-full">
+            <!-- First row - 1 card -->
+            <div class="flex justify-center">
+                <div class="card rounded-2xl p-6 w-80 flex items-center gap-6">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0"> 
+                        <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="assets/gasmi-sondes.webp" 
+                                 alt="GASMI Sondes" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src=''; this.alt='Photo not available'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-20 h-20 rounded-full member-avatar flex items-center justify-center text-white text-2xl font-bold\'>GS</div>';">
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-white mb-3">GASMI Sondes</h3>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                            View Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second row - 2 cards -->
+            <div class="flex justify-center gap-8 flex-wrap">
+                <div class="card rounded-2xl p-6 w-80 flex items-center gap-6">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="assets/ki.png" 
+                             alt="BOUREGAA Kawther Ikhlas" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Photo not available'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-20 h-20 rounded-full member-avatar flex items-center justify-center text-white text-2xl font-bold\'>KI</div>';">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-white mb-3">BOUREGAA Kawther Ikhlas</h3>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                            View Portfolio
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card rounded-2xl p-6 w-80 flex items-center gap-6">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="assets/souhaib-djenane.jpg" 
+                             alt="DJENANE Souhaib" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Photo not available'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-20 h-20 rounded-full member-avatar flex items-center justify-center text-white text-2xl font-bold\'>SD</div>';">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-white mb-3">DJENANE Souhaib</h3>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                            View Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third row - 2 cards -->
+            <div class="flex justify-center gap-8 flex-wrap">
+                <div class="card rounded-2xl p-6 w-80 flex items-center gap-6">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="assets/sahraoui-aya.png" 
+                             alt="SAHRAOUI Aya" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Photo not available'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-20 h-20 rounded-full member-avatar flex items-center justify-center text-white text-2xl font-bold\'>SA</div>';">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-white mb-3">SAHRAOUI Aya</h3>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                            View Portfolio
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card rounded-2xl p-6 w-80 flex items-center gap-6">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="assets/cherfia-abdellah.webp" 
+                             alt="CHERFIA Abdellah" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Photo not available'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-20 h-20 rounded-full member-avatar flex items-center justify-center text-white text-2xl font-bold\'>CA</div>';">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-white mb-3">CHERFIA Abdellah</h3>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                            View Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
