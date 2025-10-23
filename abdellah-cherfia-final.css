@@ -19,10 +19,17 @@
 
 
 :root {
+<<<<<<<< HEAD:souhaib-djenane.css
             --primary: #00d4ff;
             --secondary: #a855f7;
             --dark: #0f0f0f;
             --darker: #050505;
+========
+            --primary: #5d00ff;
+            --secondary: #f75555;
+            --dark: #ff9797;
+            --darker: #0a0529;
+>>>>>>>> abdellah-branch-final:abdellah-cherfia.css
           
         }
         
